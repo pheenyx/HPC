@@ -21,6 +21,21 @@ Sheet 2}
 
 
 \section{Question 1}
-TODO
+Didn't work... :-(
+
+\section{Question 2}
+What is the "sequential fraction"?
+
+\section{Question 3}
+
+\subsection{a)}
+Another example of superlinear speedup:\\
+If the algorithm is randomized and seraches a specific element in a datastructure, lets say a tree. The more processors that start to search at different enrtypoints of the tree, the faster they will succeed.
+
+\subsection{b)}
+\textit{An apparent alternative would be to identify aggregate tasks with elements of \texttt{bin\_counts}, so an aggregate task would consist of all
+increments of \texttt{bin\_counts[b]} and consequently all calls to \texttt{find\_bin} that return \texttt{b}.}\\
+
+In this idea we would split up the incrementation by 1 of some variable over multiple cores, whilst the much harder task to find the correct bin for each data piece (that needs to be incremented) remains the bottleneck of the function. 
 
 \end{document}
