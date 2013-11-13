@@ -11,9 +11,8 @@
 \setcounter{secnumdepth}{0}
 \usepackage[inner=2.5cm,outer=2.5cm,top=1.5cm,bottom=1.5cm,includeheadfoot]{geometry}
 
-\author{Nils Döhring \and Michael Mardaus \and Julian F. Rost}
-\title{\includegraphics[scale=0.2]{logo_schriftzug}\\ High Performance Computing:
-Sheet 2}
+\author{Nils Döring \and Michael Mardaus \and Julian F. Rost}
+\title{High Performance Computing: Sheet 2}
 
 \begin{document}
 
@@ -21,10 +20,11 @@ Sheet 2}
 
 
 \section{Question 1}
-Didn't work... :-(
+
 
 \section{Question 2}
-What is the "sequential fraction"?
+\subsection{a)}
+The sequential fraction of a program is the part which can not be parallelized, such as initiation or termination of the program, communication between parts of the program and time used by synchronizing the different parts of the program running parallel. This sequential fraction can not be parallelized and does not speed up with the number of processors.
 
 \section{Question 3}
 
@@ -36,6 +36,6 @@ If the algorithm is randomized and seraches a specific element in a datastructur
 \textit{An apparent alternative would be to identify aggregate tasks with elements of \texttt{bin\_counts}, so an aggregate task would consist of all
 increments of \texttt{bin\_counts[b]} and consequently all calls to \texttt{find\_bin} that return \texttt{b}.}\\
 
-In this idea we would split up the incrementation by 1 of some variable over multiple cores, whilst the much harder task to find the correct bin for each data piece (that needs to be incremented) remains the bottleneck of the function. 
+In this idea we would split up the incrementation by 1 of some variable over multiple cores, whilst the much harder task to find the correct bin for each data piece (that needs to be incremented) remains the bottleneck of the function.
 
 \end{document}
