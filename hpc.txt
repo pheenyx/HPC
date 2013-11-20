@@ -1,0 +1,21 @@
+Q1:
+
+a) Assign the next ceil(n / comm_sz) vector parts to each of the first n-1 cpus and the rest will be assigned to cpu n. 
+b) For cpu i, assign it all vector parts numbered x, so that x % comm_sz = i. 
+c) For cpu i, assign it all vector parts numbered x, so that floor( (x / b) % comm_sz ) = i. 
+
+Q2:
+
+Yes it does. In fact, this code will lock every single time. Deadlocks are inevitable. Send will only terminate once the communication partner recieves, and since both try to send before recieving, they will not terminate. 
+
+Solutions: 
+Reverse the order of MPI_Recv and MPI_Send commands in exactly one of the communication partners. 
+
+Alternatively, use a different function to communicate, as outlined below: 
+Use MPI_Sendrecv instead, which can recieve and send simultaneously. 
+Use MPI_Irecv and MPI_Isend, which will recieve or send asynchronously, respectively, and therefore terminate the subroutine instantly. 
+Use MPI_Bcast to flood the network. Yay. 
+
+Q3:
+
+AllReduce is much more performant; its runtime is logarithmic, while the ring-pass structure's is linear. 
