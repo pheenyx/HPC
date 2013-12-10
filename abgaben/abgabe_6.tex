@@ -1,0 +1,61 @@
+\documentclass[10pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{microtype, multicol, marginnote, bera, parskip}
+\usepackage{listings, amsmath, amssymb, graphicx, tikz, epic}
+\usepackage{stmaryrd} %for lightning arrow
+\usepackage{pstricks, pst-node, pst-tree, pdflscape}
+\usepackage[babel=true]{csquotes}
+\tolerance=2000
+\setcounter{secnumdepth}{0}
+\usepackage[inner=2.5cm,outer=2.5cm,top=1.5cm,bottom=1.5cm,includeheadfoot]{geometry}
+
+\author{Nils Döring \and Michael Mardaus \and Julian F. Rost \and Sebastian Müller}
+\title{High Performance Computing: Sheet 6}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Question 1}
+
+\subsection{a)}
+
+        For each combination of tours the algorithm has to check if its shorter
+        than the existing ones. The number of tours lies in $O(n!)$ and
+        therefore grows exceedingly fast. Each tour has to be stored before
+        distribution which causes a high load in memory.
+
+\subsection{b)}
+
+\subsection{c)}
+
+
+\section{Question 2}
+
+\subsection{a)}
+
+        If we half the stack only by the number of tours, we do not look for the
+        time of execution needed for each tour. Due to the fact that every tour
+        has different depth and therefore takes a different time to end, we
+        don't balance the workload equaly.
+
+\subsection{b)}
+
+        This strategy works better, but does not help, if there is just one job
+        taking much time to execute, while the others are fast finished.
+        Therefore one process, in this it will be process A, will take a lot of
+        time, while the other is finished much earlier.
+
+\subsection{c)}
+
+        For the execution time alone this strategy is good. The process-load is
+        averagely distributed. But in order to calculate the average costs for
+        each edge, a lot of computing time is required, because each edge has to
+        be walked through. Therefore this strategy has a high build-up time,
+        which ws unlikely to to be canceled out by the lesser time the DFSes
+        would take.
+
+\end{document}
