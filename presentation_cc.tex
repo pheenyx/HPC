@@ -1,0 +1,241 @@
+\documentclass[]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[USenglish]{babel}
+\usepackage{microtype, multicol, marginnote, bera, parskip}
+\usepackage{listings, amsmath, amssymb, graphicx, tikz, epic}
+\usepackage{stmaryrd} %for lightning arrow
+\usepackage[babel=true]{csquotes}
+\tolerance=2000
+\setcounter{secnumdepth}{0}
+
+\usetheme{Hannover}
+\usecolortheme{seahorse}
+
+\author{Michael Mardaus \and Julian F. Rost \and Sebastian Müller \and Nils Döring}
+\title{Critical view on cloud computing}
+
+\begin{document}
+
+\begin{frame}
+        \titlepage
+\end{frame}
+
+%\begin{frame}
+%        \frametitle{Structure}
+%        \framesubtitle{What you are up to}
+%        \tableofcontents[hideallsubsections]
+%\end{frame}
+
+\section{Gain}
+
+\begin{frame}
+        \frametitle{Gains for different groups}
+        \framesubtitle{Winner and Prices}
+        Who is gaining and how?
+\end{frame}
+
+\subsection{Cloud-Owners}
+
+\begin{frame}
+        \frametitle{Gains for different groups}
+        \framesubtitle{Cloud-Owners}
+        \begin{itemize}
+                \item higher utilisation of the existing computing power
+                \item lower average costs for bigger systems
+                \item additional income for companies from other sectors
+        \end{itemize}
+\end{frame}
+
+\subsection{Cloud-Users}
+
+\begin{frame}
+        \frametitle{Gains for different groups}
+        \framesubtitle{Cloud-Users}
+        \begin{itemize}
+                \item easier access to computing ressources
+                \item "scalable" ressources
+        \end{itemize}
+\end{frame}
+
+\subsection{Governments}
+
+\begin{frame}
+        \frametitle{Gains for different groups}
+        \framesubtitle{Governments}
+        \begin{itemize}
+                \item means for censorship and prosecution (Youtube ans
+                Pakistan, USA-Patriot-Act, "Great Firewall of China",
+                BKA-"Stop-Signs")
+        \end{itemize}
+\end{frame}
+
+\section{Challenges}
+
+\begin{frame}
+        \frametitle{Challenges of using clouds}
+        \framesubtitle{Obstacles and hurdles}
+        What are we up to, if we consider to use a cloud-service?
+\end{frame}
+
+\subsection{Performance}
+
+\begin{frame}
+        \frametitle{Performance challenges}
+        \framesubtitle{Is it as fast as yesterday?}
+        \begin{itemize}
+                \item varying performance in especially smaller and medium sized
+                clouds {load-changes have higer impact}
+                \item latency might cause trouble with timeouts
+        \end{itemize}
+\end{frame}
+
+\subsection{Accessability}
+
+\begin{frame}
+        \frametitle{Accessability/dependence challenges}
+        \framesubtitle{Why can't I connect and when is it fixed?}
+        \begin{itemize}
+                \item as data and service is outsourced, connection has to be
+                high-available
+                \item need for outage prevention and mitigation
+        \end{itemize}
+\end{frame}
+
+\subsection{Strategic}
+
+\begin{frame}
+        \frametitle{Strategic challenges}
+        \framesubtitle{How much do you want to pay for what?}
+        \begin{itemize}
+                \item low-cost solution vs. better or more secure solutions
+                (aka. Finance Dept. vs. IT Dept.)
+                \item outsourcing of know-how
+                \item lock-in might be more expensive in the long run (raising
+                prices)
+                \item need for strict auditing
+                \item more complex communication between cloud-provider and
+                cloud-users
+        \end{itemize}
+\end{frame}
+
+\subsection{Modifiability}
+
+\begin{frame}
+        \frametitle{Modifiability challenges}
+        \framesubtitle{Your code is perfect, now change it!}
+        \begin{itemize}
+                \item given standardised protocols and software-versions
+                \item monopolisation of standards
+                \item scalability is limited by the architecture of the cloud
+                \item long-term SLAs might slow down developement
+        \end{itemize}
+\end{frame}
+
+\subsection{Customer-Relationship}
+
+\begin{frame}
+        \frametitle{Customer-Relationship challenges}
+        \framesubtitle{What to tell on press-conferences?}
+        \begin{itemize}
+                \item is the company allowed to store customers data in the
+                cloud?
+                \item are customers expecting the data to be stored inhouse?
+        \end{itemize}
+\end{frame}
+
+\section{Risks}
+
+\begin{frame}
+        \frametitle{Risks for all participants}
+        \framesubtitle{What can go wrong, will go wrong}
+        Which problems and dangers might occur?
+\end{frame}
+
+\subsection{Privacy}
+
+\begin{frame}
+        \frametitle{Privacy risks}
+        \framesubtitle{My data, your data, our data!}
+        \begin{itemize}
+                \item need for complete encryption to protect privacy, slows
+                down computation
+                \item laws for privacy regulation might hinder services
+                \item national security regulations can prevent privacy
+                \item other cloud-users share the same hardware, thus it is
+                easier to get access to protected date
+                \item cloud-owners can access your data nearby as they wish
+        \end{itemize}
+\end{frame}
+
+\subsection{Integrity}
+
+\begin{frame}
+        \frametitle{Integrity risks}
+        \framesubtitle{I am sure, I've checked that!}
+        \begin{itemize}
+                \item since the processes are virtualised or layered, there are
+                no guaranties for integrity of data or procedures
+                \item possible loss of data, if the cloud-provider does not take
+                care
+        \end{itemize}
+\end{frame}
+
+\subsection{Reachability}
+
+\begin{frame}
+        \frametitle{Reachability risks}
+        \framesubtitle{Why is the internet offline?}
+        \begin{itemize}
+                \item a cloud-service without connectivity is useless
+                \item lower bandwidth inhibits effective use of services
+                \item permanent connection is necessary, each breakdown hurts
+                public-relations
+        \end{itemize}
+\end{frame}
+
+\subsection{Security}
+
+\begin{frame}
+        \frametitle{Security risks}
+        \framesubtitle{Once my machine, now your machine!}
+        \begin{itemize}
+                \item each security breach affects the whole cloud
+                \item broken and taken over cloud-users could infect or
+                slow-down the whole cloud
+                \item standardised hardware and software-stacks are prefered
+                targets
+        \end{itemize}
+\end{frame}
+
+\subsection{Social}
+
+\begin{frame}
+        \frametitle{Social risks}
+        \framesubtitle{Some are more equal than others!}
+        \begin{itemize}
+                \item cloud-computing leads to the centralising of the Internet
+                \item regions without broadband-connectivity are excluded from
+                cloud-usage
+                \item monopolists push other companies out of the market
+                \item computation-power concentrates on a few players
+                \item know-how concentrates also on a few players
+        \end{itemize}
+\end{frame}
+
+\section{Paper}
+
+\begin{frame}
+        \frametitle{Paper}
+        \framesubtitle{Where to look at}
+        \begin{itemize}
+                \item Security and high availability in cloud computing
+                environments - IBM (2011)
+                \item Emerging Issues: Cloud Computing 1 of 5- South African Internet
+                Governance (2011)
+                \item Above the Clouds: A Berkeley View of Cloud Computing
+                (2009)
+        \end{itemize}
+\end{frame}
+
+\end{document}
