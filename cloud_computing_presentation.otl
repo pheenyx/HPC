@@ -1,0 +1,80 @@
+Cloud-computing smackdown:
+
+Risks
+	Privacy
+		by cloud-owners
+		by other cloud-users
+		by foreign governments
+	Integrity
+		each procedure is purely virtual
+	Reachability
+		connection to the cloud
+		slow bandwidth might be not mitigatable
+	Security
+		unpatched infrastruckture
+		unpatched and hacked neighbors
+
+
+Challenges
+	Performance
+		Latency
+		Bandwidth
+		CPU
+	Accessability
+		Data
+		Services
+	Depenence
+		Services
+	Financial strategy vs. IT strategy
+		low-cost vs. better or more secure approaches
+		outsourcing of know-how
+		lock-in might be more expensive in the long-run
+	Fast growth vs. stable growth
+	Changebility
+		strict jurisdictional SLAs might slow down developement
+	Structure of the Internet
+		decentralised structures getting more central
+			bandwidth problems
+		multiclass society
+			access to bandwith
+			access to internet
+			access to services
+	Indirection layer in corporate structure
+		need for auditing
+		more and more complex communication
+	Need to adapt own ideas to given structures
+		mainly in PaaS and SaaS environments
+		given standardised protocols or software-versions
+		monopolisation of standards
+		scalability is limited by the architecture of the cloud
+	Legal issues
+		is the company allowed to store its users data in the cloud
+
+
+Gain
+	Cloud-Owners
+		higher usage of available ressources
+	Cloud-Users
+		easier access to ressources
+		smaller and medium businesses have to agree to terms
+	End-Users
+		none
+	Governments
+		means for censorship and prosecution
+
+
+Public vs. Private Clouds
+	Public Clouds
+		varying performance, accessability, security per cloud
+		raids for other users might affect you
+		need for encryption slows down the computation
+		monopolization of the computing ressources
+	Private Cloud
+		own departements within the corporation
+		separation of administration and developement
+
+
+Papers
+	Security and high availability in cloud computing environments - IBM
+	Emerging Issues: Cloud Computing - South African Internet Governance
+	Above the Clouds: A Berkeley View of Cloud Computing
